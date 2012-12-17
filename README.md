@@ -6,7 +6,7 @@ Ever want to get the status image for a particular build in a Travis job?
 
 The API:
 
-  https://travis-build-status.herokuapp.com/sparklemotion/nokogiri/rbx-19mode
+  https://travis-build-status.herokuapp.com?owner-name=sparklemotion&repo-name=nokogiri&ruby-engine=rbx-19mode
 
 Returns:
 
