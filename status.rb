@@ -2,7 +2,6 @@ require 'goliath'
 require 'em-synchrony/em-http'
 require 'em-http/middleware/json_response'
 require 'yajl'
-require 'pry'
 
 EM::HttpRequest.use EventMachine::Middleware::JSONResponse
 
