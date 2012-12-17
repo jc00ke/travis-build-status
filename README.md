@@ -10,4 +10,8 @@ The API:
 
 Returns:
 
-  failing/passing/unknown status image
+![failing](https://raw.github.com/travis-ci/travis-api/master/public/images/result/failing.png)
+
+![passing](https://raw.github.com/travis-ci/travis-api/master/public/images/result/passing.png)
+
+![unknown](https://raw.github.com/travis-ci/travis-api/master/public/images/result/unknown.png)
