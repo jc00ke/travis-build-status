@@ -18,7 +18,7 @@ class Status < Goliath::API
     status = TravisStatus.new(owner_name, repo_name, ruby_engine, logger)
 
 
-    [200, { 'X-Status' => 'w00t' }, status.state]
+    [302, { 'Content-Type' => 'image/png', 'Location' => status.image_url }, status.state]
   end
 end
 
@@ -34,7 +34,7 @@ class TravisStatus
   end
 
   def image_url
-    ""
+    "https://raw.github.com/travis-ci/travis-api/master/public/images/result/#{state}.png"
   end
 
   private
