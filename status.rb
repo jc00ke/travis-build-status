@@ -34,7 +34,7 @@ class TravisStatus
   end
 
   def image_url
-    "https://raw.github.com/travis-ci/travis-api/master/public/images/result/#{state}.png"
+    "https://raw.github.com/olivierlacan/shields/master/travis/travis_#{state}.png"
   end
 
   private
