@@ -10,8 +10,8 @@ The API:
 
 Returns:
 
-![failing](https://raw.github.com/travis-ci/travis-api/master/public/images/result/failing.png)
+![failing](https://raw.github.com/olivierlacan/shields/master/travis/travis_failing.png)
 
-![passing](https://raw.github.com/travis-ci/travis-api/master/public/images/result/passing.png)
+![passing](https://raw.github.com/olivierlacan/shields/master/travis/travis_passing.png)
 
-![unknown](https://raw.github.com/travis-ci/travis-api/master/public/images/result/unknown.png)
+![unknown](https://raw.github.com/olivierlacan/shields/master/travis/travis_unknown.png)
