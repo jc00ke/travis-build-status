@@ -1,4 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 
 gem 'goliath', :git => 'git://github.com/postrank-labs/goliath.git'
 gem 'em-http-request', :git => 'git://github.com/igrigorik/em-http-request.git'

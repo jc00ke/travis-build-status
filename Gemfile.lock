@@ -33,7 +33,7 @@ GIT
       rack-respond_to
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.3.2)
     async-rack (0.5.1)
