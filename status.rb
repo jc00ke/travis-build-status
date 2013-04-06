@@ -48,12 +48,16 @@ class TravisStatus
   end
 
   def fetch_details
-    get_builds
-    @last_build_id = @builds.first.fetch("id")
-    get_latest_build
-    get_the_job
-    @result = get_result
-    @state = get_state
+    begin
+      get_builds
+      @last_build_id = @builds.first.fetch("id")
+      get_latest_build
+      get_the_job
+      @result = get_result
+      @state = get_state
+    rescue Object
+      @state = "unknown"
+    end
   end
 
   def get_state
