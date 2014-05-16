@@ -23,7 +23,7 @@ class Status < Goliath::API
 end
 
 class TravisStatus
-  attr_reader :owner_name, :repo_name, :ruby_engine, :logger, :latest_build, :state, :the_job
+  attr_reader :owner_name, :repo_name, :ruby_engine, :logger, :latest_build, :state, :the_job, :color
 
   def initialize(owner_name, repo_name, ruby_engine, logger=STDOUT)
     @owner_name = owner_name
@@ -34,7 +34,7 @@ class TravisStatus
   end
 
   def image_url
-    "https://raw.github.com/gittip/shields.io/master/static/travis/travis_#{state}.png"
+    "//img.shields.io/badge/Build-#{state}-#{color}.svg"
   end
 
   private
@@ -55,6 +55,7 @@ class TravisStatus
       get_the_job
       @result = get_result
       @state = get_state
+      @color = set_color
     rescue Object
       @state = "unknown"
     end
@@ -67,6 +68,17 @@ class TravisStatus
       "failing"
     else
       "unknown"
+    end
+  end
+
+  def set_color
+    case @state
+    when "passing"
+      "green"
+    when "failing"
+      "red"
+    else
+      "lightgrey"
     end
   end
 
