@@ -58,6 +58,7 @@ class TravisStatus
       @color = set_color
     rescue Object
       @state = "unknown"
+      @color = "lightgrey"
     end
   end
 
