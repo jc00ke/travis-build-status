@@ -38,7 +38,7 @@ class TravisStatus
   end
 
   def image_url
-    "//img.shields.io/badge/Build-#{state}-#{color}.svg"
+    "https://img.shields.io/badge/Build-#{state}-#{color}.svg"
   end
 
   private
